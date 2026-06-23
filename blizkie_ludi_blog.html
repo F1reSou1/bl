@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог — ЦСО «Близкие люди»</title>
+  <meta name="description" content="Полезные материалы ЦСО «Близкие люди»: уход за пожилыми, деменция, сиделки, чек-листы для семьи.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;500;600;700&subset=cyrillic&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{fontFamily:{sans:['Nunito Sans','system-ui','sans-serif'],heading:['Nunito','system-ui','sans-serif']},extend:{colors:{brand:{50:'#f2f5f0',100:'#dfe6da',200:'#A5B68D',300:'#7a9a6a',400:'#5f8155',500:'#4F6F52',600:'#3d5940',700:'#2d4530',800:'#1A4D2E',900:'#0f2e1a'},warm:{50:'#F5EFE6',100:'#E8DFCA',200:'#ddd3bb'}}}}}</script>
+  <style>body{font-family:'Nunito Sans',system-ui,sans-serif;background:#F5EFE6}h1,h2,h3,h4{font-family:'Nunito',system-ui,sans-serif}.article-body h4{font-weight:800;color:#111827;margin-top:1rem}.article-body ul{list-style:disc;padding-left:1.25rem}.article-body ol{list-style:decimal;padding-left:1.25rem}.article-body li{margin-top:.35rem}</style>
+</head>
+<body class="text-gray-800">
+  <header class="bg-warm-50/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="blizkie_ludi.html" class="flex items-center gap-3" aria-label="ЦСО Близкие люди">
+        <span class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white border border-brand-100 flex items-center justify-center shadow-sm overflow-hidden">
+          <img src="logo-icon.png" alt="" class="w-9 h-9 sm:w-10 sm:h-10 object-contain" aria-hidden="true">
+        </span>
+        <span class="leading-tight">
+          <span class="block text-base sm:text-lg md:text-xl font-extrabold text-gray-900 whitespace-nowrap">Близкие люди</span>
+          <span class="hidden sm:block text-[10px] md:text-xs uppercase tracking-wide text-brand-700 font-semibold whitespace-nowrap">Центр социального обслуживания</span>
+        </span>
+      </a>
+      <a href="blizkie_ludi.html#blog" class="text-sm font-bold text-brand-700 hover:text-brand-900">← На главную</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-14 md:py-20 bg-warm-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+        <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-5">Блог ЦСО «Близкие люди»</h1>
+        <p class="text-gray-500 max-w-3xl mx-auto text-lg">Тестовый предпоказный раздел: карточки, категории и статьи в попапах без перехода на внешние сайты.</p>
+      </div>
+    </section>
+
+    <section class="pb-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div id="tagFilters" class="flex flex-wrap justify-center gap-3 mb-14">
+          <button type="button" onclick="filterArticles('Все')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="Все">Все</button><button type="button" onclick="filterArticles('Про центр')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="Про центр">Про центр</button><button type="button" onclick="filterArticles('О деменции')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="О деменции">О деменции</button><button type="button" onclick="filterArticles('Рабочие зарисовки')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="Рабочие зарисовки">Рабочие зарисовки</button><button type="button" onclick="filterArticles('Нужна сиделка. Что делать?')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="Нужна сиделка. Что делать?">Нужна сиделка. Что делать?</button><button type="button" onclick="filterArticles('Клуб незабудка')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="Клуб незабудка">Клуб незабудка</button><button type="button" onclick="filterArticles('Говорим про уход')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="Говорим про уход">Говорим про уход</button><button type="button" onclick="filterArticles('Чек-листы')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="Чек-листы">Чек-листы</button><button type="button" onclick="filterArticles('Вебинары')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="Вебинары">Вебинары</button><button type="button" onclick="filterArticles('Что почитать')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="Что почитать">Что почитать</button><button type="button" onclick="filterArticles('Что посмотреть')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="Что посмотреть">Что посмотреть</button><button type="button" onclick="filterArticles('Разное')" class="tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition bg-white text-cyan-500 hover:bg-brand-50" data-tag="Разное">Разное</button>
+        </div>
+        <div id="articlesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+      <article class="blog-card bg-white rounded-3xl p-5 border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col" data-tags="Разное,Говорим про уход">
+        <button type="button" onclick="openArticle('cholesterol')" class="text-left flex flex-col h-full group">
+          <div class="relative h-52 rounded-2xl overflow-hidden bg-gradient-to-br from-amber-100 via-lime-100 to-brand-100 mb-5">
+            <div class="absolute inset-0 flex items-center justify-center opacity-80">
+              <svg class="w-28 h-28 text-brand-700/25" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7h6M9 11h7M9 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="absolute right-3 bottom-3 bg-brand-700/85 text-white text-xs font-bold px-3 py-1.5 rounded-lg">Разное</span>
+          </div>
+          <h2 class="text-lg font-extrabold text-gray-900 leading-snug mb-3 group-hover:text-brand-700 transition">Норма холестерина у пожилых людей: показатели по возрасту и как держать их под контролем</h2>
+          <p class="text-gray-500 leading-relaxed mb-7 flex-1">Общий холестерин, ЛПНП, ЛПВП и триглицериды: что контролировать семье, когда обращаться к врачу и как поддерживать режим дома.</p>
+          <span class="inline-flex w-fit border-b border-dashed border-brand-700 text-brand-700 font-bold text-sm pb-0.5">Читать статью</span>
+        </button>
+      </article>
+      <article class="blog-card bg-white rounded-3xl p-5 border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col" data-tags="О деменции,Чек-листы">
+        <button type="button" onclick="openArticle('dementia-disability')" class="text-left flex flex-col h-full group">
+          <div class="relative h-52 rounded-2xl overflow-hidden bg-gradient-to-br from-stone-100 via-brand-50 to-warm-100 mb-5">
+            <div class="absolute inset-0 flex items-center justify-center opacity-80">
+              <svg class="w-28 h-28 text-brand-700/25" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7h6M9 11h7M9 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="absolute right-3 bottom-3 bg-brand-700/85 text-white text-xs font-bold px-3 py-1.5 rounded-lg">О деменции</span>
+          </div>
+          <h2 class="text-lg font-extrabold text-gray-900 leading-snug mb-3 group-hover:text-brand-700 transition">Инвалидность при деменции: как оформить, документы и этапы МСЭ</h2>
+          <p class="text-gray-500 leading-relaxed mb-7 flex-1">С чего начать оформление, какие документы собрать, что важно рассказать врачу и комиссии, если близкий уже не справляется сам.</p>
+          <span class="inline-flex w-fit border-b border-dashed border-brand-700 text-brand-700 font-bold text-sm pb-0.5">Читать статью</span>
+        </button>
+      </article>
+      <article class="blog-card bg-white rounded-3xl p-5 border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col" data-tags="Говорим про уход,Разное">
+        <button type="button" onclick="openArticle('obesity')" class="text-left flex flex-col h-full group">
+          <div class="relative h-52 rounded-2xl overflow-hidden bg-gradient-to-br from-lime-100 via-warm-100 to-orange-100 mb-5">
+            <div class="absolute inset-0 flex items-center justify-center opacity-80">
+              <svg class="w-28 h-28 text-brand-700/25" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7h6M9 11h7M9 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="absolute right-3 bottom-3 bg-brand-700/85 text-white text-xs font-bold px-3 py-1.5 rounded-lg">Говорим про уход</span>
+          </div>
+          <h2 class="text-lg font-extrabold text-gray-900 leading-snug mb-3 group-hover:text-brand-700 transition">Ожирение у пожилых людей: чем опасно, как помочь и когда нужен особый уход</h2>
+          <p class="text-gray-500 leading-relaxed mb-7 flex-1">Почему лишний вес у пожилых связан с риском падений, слабостью, одышкой и повышенной нагрузкой на семью.</p>
+          <span class="inline-flex w-fit border-b border-dashed border-brand-700 text-brand-700 font-bold text-sm pb-0.5">Читать статью</span>
+        </button>
+      </article>
+      <article class="blog-card bg-white rounded-3xl p-5 border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col" data-tags="Говорим про уход,Нужна сиделка. Что делать?">
+        <button type="button" onclick="openArticle('hip-rehab')" class="text-left flex flex-col h-full group">
+          <div class="relative h-52 rounded-2xl overflow-hidden bg-gradient-to-br from-sky-100 via-brand-50 to-warm-100 mb-5">
+            <div class="absolute inset-0 flex items-center justify-center opacity-80">
+              <svg class="w-28 h-28 text-brand-700/25" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7h6M9 11h7M9 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="absolute right-3 bottom-3 bg-brand-700/85 text-white text-xs font-bold px-3 py-1.5 rounded-lg">Говорим про уход</span>
+          </div>
+          <h2 class="text-lg font-extrabold text-gray-900 leading-snug mb-3 group-hover:text-brand-700 transition">Почему после эндопротезирования тазобедренного сустава нужна полноценная реабилитация</h2>
+          <p class="text-gray-500 leading-relaxed mb-7 flex-1">Как организовать безопасный уход дома после выписки: ранний этап, упражнения, ограничения и профилактика вывиха.</p>
+          <span class="inline-flex w-fit border-b border-dashed border-brand-700 text-brand-700 font-bold text-sm pb-0.5">Читать статью</span>
+        </button>
+      </article>
+      <article class="blog-card bg-white rounded-3xl p-5 border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col" data-tags="Говорим про уход,Чек-листы">
+        <button type="button" onclick="openArticle('constipation')" class="text-left flex flex-col h-full group">
+          <div class="relative h-52 rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 via-warm-100 to-brand-50 mb-5">
+            <div class="absolute inset-0 flex items-center justify-center opacity-80">
+              <svg class="w-28 h-28 text-brand-700/25" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7h6M9 11h7M9 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="absolute right-3 bottom-3 bg-brand-700/85 text-white text-xs font-bold px-3 py-1.5 rounded-lg">Говорим про уход</span>
+          </div>
+          <h2 class="text-lg font-extrabold text-gray-900 leading-snug mb-3 group-hover:text-brand-700 transition">Запор у лежачего больного: причины, опасность, лечение и профилактика</h2>
+          <p class="text-gray-500 leading-relaxed mb-7 flex-1">Почему запор часто возникает у лежачих пожилых и какие бытовые меры помогают не довести ситуацию до осложнений.</p>
+          <span class="inline-flex w-fit border-b border-dashed border-brand-700 text-brand-700 font-bold text-sm pb-0.5">Читать статью</span>
+        </button>
+      </article>
+      <article class="blog-card bg-white rounded-3xl p-5 border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col" data-tags="Говорим про уход,Разное">
+        <button type="button" onclick="openArticle('nail-fungus')" class="text-left flex flex-col h-full group">
+          <div class="relative h-52 rounded-2xl overflow-hidden bg-gradient-to-br from-emerald-100 via-brand-50 to-stone-100 mb-5">
+            <div class="absolute inset-0 flex items-center justify-center opacity-80">
+              <svg class="w-28 h-28 text-brand-700/25" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7h6M9 11h7M9 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="absolute right-3 bottom-3 bg-brand-700/85 text-white text-xs font-bold px-3 py-1.5 rounded-lg">Говорим про уход</span>
+          </div>
+          <h2 class="text-lg font-extrabold text-gray-900 leading-snug mb-3 group-hover:text-brand-700 transition">Грибок ногтей у пожилых: признаки, чем опасен, уход и профилактика</h2>
+          <p class="text-gray-500 leading-relaxed mb-7 flex-1">Почему изменение цвета и толщины ногтей нельзя списывать только на возраст и когда нужно показать пожилого человека врачу.</p>
+          <span class="inline-flex w-fit border-b border-dashed border-brand-700 text-brand-700 font-bold text-sm pb-0.5">Читать статью</span>
+        </button>
+      </article>
+      <article class="blog-card bg-white rounded-3xl p-5 border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col" data-tags="Чек-листы,Говорим про уход">
+        <button type="button" onclick="openArticle('checkup')" class="text-left flex flex-col h-full group">
+          <div class="relative h-52 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-100 via-brand-50 to-warm-100 mb-5">
+            <div class="absolute inset-0 flex items-center justify-center opacity-80">
+              <svg class="w-28 h-28 text-brand-700/25" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7h6M9 11h7M9 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="absolute right-3 bottom-3 bg-brand-700/85 text-white text-xs font-bold px-3 py-1.5 rounded-lg">Чек-листы</span>
+          </div>
+          <h2 class="text-lg font-extrabold text-gray-900 leading-snug mb-3 group-hover:text-brand-700 transition">Диспансеризация для пожилых людей: зачем нужна, как проходит и что входит</h2>
+          <p class="text-gray-500 leading-relaxed mb-7 flex-1">Как семье подготовить пожилого человека к диспансеризации, какие документы взять и почему не стоит откладывать обследования.</p>
+          <span class="inline-flex w-fit border-b border-dashed border-brand-700 text-brand-700 font-bold text-sm pb-0.5">Читать статью</span>
+        </button>
+      </article>
+      <article class="blog-card bg-white rounded-3xl p-5 border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col" data-tags="Нужна сиделка. Что делать?,Про центр">
+        <button type="button" onclick="openArticle('patronage-center')" class="text-left flex flex-col h-full group">
+          <div class="relative h-52 rounded-2xl overflow-hidden bg-gradient-to-br from-brand-100 via-warm-100 to-lime-100 mb-5">
+            <div class="absolute inset-0 flex items-center justify-center opacity-80">
+              <svg class="w-28 h-28 text-brand-700/25" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7h6M9 11h7M9 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="absolute right-3 bottom-3 bg-brand-700/85 text-white text-xs font-bold px-3 py-1.5 rounded-lg">Нужна сиделка. Что делать?</span>
+          </div>
+          <h2 class="text-lg font-extrabold text-gray-900 leading-snug mb-3 group-hover:text-brand-700 transition">Патронажный центр: что это такое, услуги и как выбрать подходящий вариант</h2>
+          <p class="text-gray-500 leading-relaxed mb-7 flex-1">Чем патронажный центр отличается от частного поиска сиделки, какие вопросы задать перед договором и на что смотреть семье.</p>
+          <span class="inline-flex w-fit border-b border-dashed border-brand-700 text-brand-700 font-bold text-sm pb-0.5">Читать статью</span>
+        </button>
+      </article>
+      <article class="blog-card bg-white rounded-3xl p-5 border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col" data-tags="Нужна сиделка. Что делать?,Чек-листы">
+        <button type="button" onclick="openArticle('when-caregiver')" class="text-left flex flex-col h-full group">
+          <div class="relative h-52 rounded-2xl overflow-hidden bg-gradient-to-br from-violet-100 via-brand-50 to-warm-100 mb-5">
+            <div class="absolute inset-0 flex items-center justify-center opacity-80">
+              <svg class="w-28 h-28 text-brand-700/25" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7h6M9 11h7M9 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="absolute right-3 bottom-3 bg-brand-700/85 text-white text-xs font-bold px-3 py-1.5 rounded-lg">Нужна сиделка. Что делать?</span>
+          </div>
+          <h2 class="text-lg font-extrabold text-gray-900 leading-snug mb-3 group-hover:text-brand-700 transition">В каких случаях требуется сиделка для пожилого человека</h2>
+          <p class="text-gray-500 leading-relaxed mb-7 flex-1">Как понять, что семье уже нужна помощь: признаки перегруза, небезопасного быта и регулярных рисков для пожилого человека.</p>
+          <span class="inline-flex w-fit border-b border-dashed border-brand-700 text-brand-700 font-bold text-sm pb-0.5">Читать статью</span>
+        </button>
+      </article>
+      <article class="blog-card bg-white rounded-3xl p-5 border border-brand-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col" data-tags="Говорим про уход,Чек-листы">
+        <button type="button" onclick="openArticle('feeding')" class="text-left flex flex-col h-full group">
+          <div class="relative h-52 rounded-2xl overflow-hidden bg-gradient-to-br from-rose-100 via-warm-100 to-brand-50 mb-5">
+            <div class="absolute inset-0 flex items-center justify-center opacity-80">
+              <svg class="w-28 h-28 text-brand-700/25" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/><path d="M9 7h6M9 11h7M9 15h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="absolute right-3 bottom-3 bg-brand-700/85 text-white text-xs font-bold px-3 py-1.5 rounded-lg">Говорим про уход</span>
+          </div>
+          <h2 class="text-lg font-extrabold text-gray-900 leading-snug mb-3 group-hover:text-brand-700 transition">Питание лежачего больного: меню, правила кормления и безопасный режим</h2>
+          <p class="text-gray-500 leading-relaxed mb-7 flex-1">Как организовать питание лежачего человека, не навредить при кормлении и на что обратить внимание в быту.</p>
+          <span class="inline-flex w-fit border-b border-dashed border-brand-700 text-brand-700 font-bold text-sm pb-0.5">Читать статью</span>
+        </button>
+      </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="articleModal" class="fixed inset-0 bg-black/70 z-[9999] hidden items-center justify-center p-4" onclick="closeArticle(event)">
+    <div class="relative bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+      <button onclick="closeArticle()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-gray-900/80 hover:bg-gray-900 text-white text-2xl leading-none">&times;</button>
+      <div class="px-6 md:px-8 py-6 bg-brand-50 border-b border-brand-100 pr-16">
+        <p id="articleCategory" class="text-xs uppercase tracking-wide text-brand-700 font-bold mb-2">Блог</p>
+        <h3 id="articleTitle" class="text-xl md:text-2xl font-extrabold text-gray-900 leading-tight">Статья</h3>
+      </div>
+      <div id="articleBody" class="article-body p-6 md:p-8 max-h-[calc(90vh-140px)] overflow-y-auto text-gray-700 leading-relaxed space-y-4"></div>
+    </div>
+  </div>
+
+  <script>
+    const ARTICLES = [{"id": "cholesterol", "category": "Разное", "tags": ["Разное", "Говорим про уход"], "accent": "from-amber-100 via-lime-100 to-brand-100", "title": "Норма холестерина у пожилых людей: показатели по возрасту и как держать их под контролем", "excerpt": "Общий холестерин, ЛПНП, ЛПВП и триглицериды: что контролировать семье, когда обращаться к врачу и как поддерживать режим дома.", "body": "<p>У пожилых людей холестерин оценивают вместе с давлением, сахаром, весом и сердечно-сосудистыми рисками. Семье важно не спорить с назначениями врача, а помочь близкому соблюдать режим.</p><h4>Что помогает</h4><ul><li>регулярные анализы и контроль назначений;</li><li>понятный рацион без резких ограничений;</li><li>посильная активность;</li><li>напоминания о лекарствах и воде.</li></ul><p>Сиделка может поддерживать бытовой режим: готовить подходящую еду, напоминать о приёме лекарств и сообщать семье о самочувствии.</p>"}, {"id": "dementia-disability", "category": "О деменции", "tags": ["О деменции", "Чек-листы"], "accent": "from-stone-100 via-brand-50 to-warm-100", "title": "Инвалидность при деменции: как оформить, документы и этапы МСЭ", "excerpt": "С чего начать оформление, какие документы собрать, что важно рассказать врачу и комиссии, если близкий уже не справляется сам.", "body": "<p>Инвалидность при деменции оформляют из-за стойких ограничений, а не из-за возраста. Важно показать, как болезнь влияет на быт: лекарства, питание, безопасность, гигиену и ориентацию.</p><h4>Порядок действий</h4><ol><li>Обратиться к врачу и зафиксировать диагноз.</li><li>Собрать выписки и обследования.</li><li>Получить направление на МСЭ.</li><li>Подготовить описание обычного дня пациента.</li></ol><p>На комиссии не стоит смягчать ситуацию. Если человек не может безопасно оставаться один, это должно быть отражено в документах.</p>"}, {"id": "obesity", "category": "Говорим про уход", "tags": ["Говорим про уход", "Разное"], "accent": "from-lime-100 via-warm-100 to-orange-100", "title": "Ожирение у пожилых людей: чем опасно, как помочь и когда нужен особый уход", "excerpt": "Почему лишний вес у пожилых связан с риском падений, слабостью, одышкой и повышенной нагрузкой на семью.", "body": "<p>В пожилом возрасте лишний вес часто сочетается с потерей мышц, болью в суставах и ограничением подвижности. Поэтому цель ухода — не быстрые диеты, а безопасный режим.</p><ul><li>питание согласуют с врачом;</li><li>активность увеличивают постепенно;</li><li>дом адаптируют, чтобы снизить риск падений;</li><li>важно следить за давлением, сахаром и одышкой.</li></ul><p>Если близкому трудно готовить, вставать и соблюдать назначения, регулярная помощь снижает нагрузку на семью.</p>"}, {"id": "hip-rehab", "category": "Говорим про уход", "tags": ["Говорим про уход", "Нужна сиделка. Что делать?"], "accent": "from-sky-100 via-brand-50 to-warm-100", "title": "Почему после эндопротезирования тазобедренного сустава нужна полноценная реабилитация", "excerpt": "Как организовать безопасный уход дома после выписки: ранний этап, упражнения, ограничения и профилактика вывиха.", "body": "<p>После эндопротезирования важно не только выписаться из больницы, но и правильно пройти первые недели дома. Ошибки в движении могут привести к боли, падениям и повторной госпитализации.</p><h4>Что нужно дома</h4><ul><li>безопасное место для сна и отдыха;</li><li>контроль подъёма, ходьбы и упражнений;</li><li>помощь с гигиеной;</li><li>напоминания о лекарствах и визитах к врачу.</li></ul><p>Сиделка помогает соблюдать ограничения и делает восстановление спокойнее для семьи.</p>"}, {"id": "constipation", "category": "Говорим про уход", "tags": ["Говорим про уход", "Чек-листы"], "accent": "from-orange-100 via-warm-100 to-brand-50", "title": "Запор у лежачего больного: причины, опасность, лечение и профилактика", "excerpt": "Почему запор часто возникает у лежачих пожилых и какие бытовые меры помогают не довести ситуацию до осложнений.", "body": "<p>У лежачих людей запор возникает из-за неподвижности, малого количества воды, питания, лекарств и общего ослабления организма.</p><h4>Что может делать семья</h4><ul><li>следить за питьём, если врач не ограничил жидкость;</li><li>обсудить питание и клетчатку;</li><li>использовать мягкую активность в постели;</li><li>вести наблюдение за частотой стула;</li><li>не применять сильные средства без врача.</li></ul><p>При боли, вздутии, рвоте или длительной задержке стула нужно обращаться к врачу.</p>"}, {"id": "nail-fungus", "category": "Говорим про уход", "tags": ["Говорим про уход", "Разное"], "accent": "from-emerald-100 via-brand-50 to-stone-100", "title": "Грибок ногтей у пожилых: признаки, чем опасен, уход и профилактика", "excerpt": "Почему изменение цвета и толщины ногтей нельзя списывать только на возраст и когда нужно показать пожилого человека врачу.", "body": "<p>Грибок ногтей у пожилых — не только эстетическая проблема. При диабете, сосудистых нарушениях и сниженной подвижности он может привести к боли, трещинам и трудностям с ходьбой.</p><ul><li>важно аккуратно ухаживать за стопами;</li><li>обувь должна быть удобной и сухой;</li><li>нельзя полагаться только на домашние средства;</li><li>диагноз и лечение подтверждает специалист.</li></ul><p>Сиделка может вовремя заметить изменения и сообщить семье.</p>"}, {"id": "checkup", "category": "Чек-листы", "tags": ["Чек-листы", "Говорим про уход"], "accent": "from-cyan-100 via-brand-50 to-warm-100", "title": "Диспансеризация для пожилых людей: зачем нужна, как проходит и что входит", "excerpt": "Как семье подготовить пожилого человека к диспансеризации, какие документы взять и почему не стоит откладывать обследования.", "body": "<p>Диспансеризация помогает вовремя заметить хронические риски: давление, сахар, сердечно-сосудистые заболевания, онкоскрининг и другие состояния.</p><h4>Перед визитом</h4><ul><li>подготовьте паспорт, полис, СНИЛС;</li><li>возьмите список лекарств;</li><li>запишите жалобы и вопросы;</li><li>продумайте сопровождение, если человеку трудно ходить.</li></ul><p>Если пожилой человек плохо ориентируется или быстро устает, сопровождение снижает стресс.</p>"}, {"id": "patronage-center", "category": "Нужна сиделка. Что делать?", "tags": ["Нужна сиделка. Что делать?", "Про центр"], "accent": "from-brand-100 via-warm-100 to-lime-100", "title": "Патронажный центр: что это такое, услуги и как выбрать подходящий вариант", "excerpt": "Чем патронажный центр отличается от частного поиска сиделки, какие вопросы задать перед договором и на что смотреть семье.", "body": "<p>Патронажный центр помогает не только найти сиделку, но и организовать процесс: график, договор, контроль, замену и связь с менеджером.</p><h4>Что проверить</h4><ul><li>какие услуги входят в уход;</li><li>как оформляется договор;</li><li>есть ли замена при необходимости;</li><li>кто отвечает за связь с семьёй;</li><li>как считается стоимость.</li></ul><p>Главное — выбирать не по обещаниям, а по прозрачности условий и способности сопровождать семью после выхода сиделки.</p>"}, {"id": "when-caregiver", "category": "Нужна сиделка. Что делать?", "tags": ["Нужна сиделка. Что делать?", "Чек-листы"], "accent": "from-violet-100 via-brand-50 to-warm-100", "title": "В каких случаях требуется сиделка для пожилого человека", "excerpt": "Как понять, что семье уже нужна помощь: признаки перегруза, небезопасного быта и регулярных рисков для пожилого человека.", "body": "<p>Сиделка нужна не только лежачему человеку. Помощь может потребоваться, если близкий забывает лекарства, падает, плохо ест, не справляется с гигиеной или не может безопасно оставаться один.</p><h4>Тревожные признаки</h4><ul><li>частые падения или страх ходить;</li><li>ошибки с лекарствами;</li><li>одиночество и тревога;</li><li>проблемы с гигиеной;</li><li>выгорание родственников.</li></ul><p>Раннее обращение помогает организовать уход до кризиса.</p>"}, {"id": "feeding", "category": "Говорим про уход", "tags": ["Говорим про уход", "Чек-листы"], "accent": "from-rose-100 via-warm-100 to-brand-50", "title": "Питание лежачего больного: меню, правила кормления и безопасный режим", "excerpt": "Как организовать питание лежачего человека, не навредить при кормлении и на что обратить внимание в быту.", "body": "<p>Питание лежачего человека — это не только меню. Важны положение тела, темп кормления, консистенция пищи, питьевой режим и наблюдение за глотанием.</p><ul><li>кормить лучше в приподнятом положении;</li><li>не торопить и не отвлекать;</li><li>следить за кашлем и поперхиванием;</li><li>после еды не укладывать сразу горизонтально;</li><li>согласовать рацион с врачом при хронических болезнях.</li></ul><p>Сиделка помогает сделать питание регулярным и безопасным.</p>"}];
+    let activeTag = 'Все';
+    function filterArticles(tag) {
+      activeTag = tag;
+      document.querySelectorAll('.tag-btn').forEach(btn => {
+        const active = btn.dataset.tag === tag;
+        btn.className = 'tag-btn px-7 py-4 rounded-xl font-extrabold text-sm uppercase tracking-wide transition ' + (active ? 'bg-teal-600 text-white shadow-lg' : 'bg-white text-cyan-500 hover:bg-brand-50');
+      });
+      document.querySelectorAll('.blog-card').forEach(card => {
+        const tags = (card.dataset.tags || '').split(',');
+        card.classList.toggle('hidden', !(tag === 'Все' || tags.includes(tag)));
+      });
+    }
+    function openArticle(id) {
+      const item = ARTICLES.find(article => article.id === id);
+      if (!item) return;
+      document.getElementById('articleCategory').textContent = item.category;
+      document.getElementById('articleTitle').textContent = item.title;
+      document.getElementById('articleBody').innerHTML = item.body + '<p class="text-xs text-gray-400 mt-6">Материал подготовлен для тестового предпоказа. Перед публикацией медицинские советы лучше вычитать со специалистом.</p>';
+      const modal = document.getElementById('articleModal');
+      modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow='hidden';
+    }
+    function closeArticle(event) {
+      if (event && event.target && event.target.id !== 'articleModal') return;
+      const modal = document.getElementById('articleModal');
+      modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow='';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+    document.addEventListener('DOMContentLoaded', () => filterArticles('Все'));
+  </script>
+</body>
+</html>
